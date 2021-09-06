@@ -24,12 +24,12 @@ npm run deploy:testnet:polygon
 
 ## BSC
 ```
-Token deployed to: 0xEf8B2675081d1E1365D1D9A1905Ec32101F631dd
-Bridge deployed to: 0x3F47259a35a8557983D9fd39A69C18a34556aaeF
+Token deployed to: 0x1EA55E6b663E63f5e1f635246BB263e5ADdA5976
+Bridge deployed to: 0x56d4c1A6E6A6De3778476A7c1ABE132a2fE8BE36
 ```
 
 ## Polygon
 ```
-Token deployed to: 0xbFdc1ED412a201f270870Ce3D6d4BA762F2c5763
-Bridge deployed to: 0x1553f4573a1De5A077EEfc88148EE3EA975eC6Ce
+Token deployed to: 0x50b6D802f32fF8021A75b491EE638C475Ce832f1
+Bridge deployed to: 0xD0deE265E191491dc544D24242E95EC563eB3F06
 ```
