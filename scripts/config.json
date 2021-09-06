@@ -1,0 +1,8 @@
+{
+    "addresses": {
+        "bscToken": "0xEf8B2675081d1E1365D1D9A1905Ec32101F631dd",
+        "bscBridge": "0x3F47259a35a8557983D9fd39A69C18a34556aaeF",
+        "polygonToken": "0xbFdc1ED412a201f270870Ce3D6d4BA762F2c5763",
+        "polygonBridge": "0x1553f4573a1De5A077EEfc88148EE3EA975eC6Ce"
+    }
+}

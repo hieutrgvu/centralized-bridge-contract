@@ -1,5 +1,5 @@
 const hre = require("hardhat");
-const keccak256 = require('keccak256')
+const keccak256 = require('keccak256');
 
 async function main() {
   const Token = await hre.ethers.getContractFactory("TokenBsc");
