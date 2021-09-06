@@ -12,7 +12,7 @@ async function start() {
     const tokenAbi = [
         "function balanceOf(address) view returns (uint)"
     ];
-    let token = new ethers.Contract(addresses.polygonToken, tokenAbi, provider);
+    let token = new ethers.Contract(addresses.polygon.token, tokenAbi, provider);
     token = token.connect(wallet);
     balance = await token.balanceOf(wallet.address);
     console.log('balance:', ethers.utils.formatUnits(balance, 18))
@@ -20,7 +20,7 @@ async function start() {
     const bridgeAbi = [
         'function transferTo(address to, uint256 amount, uint256 chainId)'
     ]
-    let bridge = new ethers.Contract(addresses.polygonBridge, bridgeAbi, provider);
+    let bridge = new ethers.Contract(addresses.polygon.bridge, bridgeAbi, provider);
     bridge = bridge.connect(wallet);
     tx = await bridge.transferTo(wallet.address, ethers.utils.parseEther('1.0'), 97);
     console.log('bridge 1 token to bsc, tx:', tx.hash);

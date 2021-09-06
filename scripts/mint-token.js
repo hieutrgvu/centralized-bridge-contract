@@ -15,7 +15,7 @@ async function start() {
     const tokenAbi = [
         'function mint(address to, uint256 amount)'
     ];
-    let token = new ethers.Contract(addresses.polygonToken, tokenAbi, provider);
+    let token = new ethers.Contract(addresses.polygon.token, tokenAbi, provider);
     token = token.connect(wallet);
     await token.mint(receiver, ethers.utils.parseEther('5.0'));
     console.log('5.0 tokens sent')
