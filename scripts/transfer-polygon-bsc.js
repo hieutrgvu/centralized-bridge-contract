@@ -6,7 +6,7 @@ async function start() {
     let wallet = new ethers.Wallet(privateKey)
     console.log('signer:', wallet.address)
 
-    const provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today');
+    const provider = new ethers.providers.JsonRpcProvider('https://matic-testnet-archive-rpc.bwarelabs.com');
     wallet = wallet.connect(provider);
 
     const tokenAbi = [

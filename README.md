@@ -20,6 +20,25 @@ npm run deploy:testnet:bsc
 npm run deploy:testnet:polygon
 ```
 
+# Demo
+1. Edit contract addresses in `scripts/config.json` and deployer's mnemonic in `secrets.json`
+
+2. Mint some tokens to an address
+```shell
+npm install
+node scripts/mint-token.js <receiver-address>
+```
+
+3. Bridge from Polygon to BSC
+```shell
+node scripts/transfer-polygon-bsc.js <sender-private-key>
+```
+
+4. Bridge from BSC to Polygon
+```shell
+node scripts/transfer-bsc-polygon.js <sender-private-key>
+```
+
 # Contracts
 
 ## BSC
