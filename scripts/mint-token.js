@@ -9,7 +9,7 @@ async function start() {
     let wallet = ethers.Wallet.fromMnemonic(mnemonic)
     console.log('signer:', wallet.address)
 
-    const provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.maticvigil.com');
+    const provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today');
     wallet = wallet.connect(provider);
 
     const tokenAbi = [

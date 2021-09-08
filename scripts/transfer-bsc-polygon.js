@@ -6,13 +6,13 @@ async function start() {
     let wallet = new ethers.Wallet(privateKey)
     console.log('signer:', wallet.address)
 
-    const provider = new ethers.providers.JsonRpcProvider('https://rpc-mumbai.matic.today');
+    const provider = new ethers.providers.JsonRpcProvider('https://data-seed-prebsc-1-s1.binance.org:8545');
     wallet = wallet.connect(provider);
 
     const tokenAbi = [
         "function balanceOf(address) view returns (uint)"
     ];
-    let token = new ethers.Contract(addresses.polygon.token, tokenAbi, provider);
+    let token = new ethers.Contract(addresses.bsc.token, tokenAbi, provider);
     token = token.connect(wallet);
     balance = await token.balanceOf(wallet.address);
     console.log('balance:', ethers.utils.formatUnits(balance, 18))
@@ -20,10 +20,10 @@ async function start() {
     const bridgeAbi = [
         'function transferTo(address to, uint256 amount, uint256 chainId)'
     ]
-    let bridge = new ethers.Contract(addresses.polygon.bridge, bridgeAbi, provider);
+    let bridge = new ethers.Contract(addresses.bsc.bridge, bridgeAbi, provider);
     bridge = bridge.connect(wallet);
-    tx = await bridge.transferTo(wallet.address, ethers.utils.parseEther('0.1'), 97);
-    console.log('bridge 0.1 token to bsc, tx:', tx.hash);
+    tx = await bridge.transferTo(wallet.address, ethers.utils.parseEther('0.1'), 80001);
+    console.log('bridge 0.1 token to polygon, tx:', tx.hash);
 };
 
 start();
